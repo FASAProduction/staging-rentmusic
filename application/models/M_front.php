@@ -99,5 +99,10 @@ class M_front extends CI_Model{
         $aa = $this->db->query("SELECT * FROM penyewaan");
         return $aa;
     }
+
+    function getting($id_alat_musik){
+        $ab = $this->db->query("SELECT * FROM alat_musik WHERE id_alat_musik='$id_alat_musik'");
+        return $ab;
+    }
 }
 ?>

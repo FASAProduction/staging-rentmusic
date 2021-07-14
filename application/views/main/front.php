@@ -533,7 +533,7 @@
                                             <?php } ?>
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="<?php echo base_url(); ?>front/dapat/<?php echo $almus->id_alat_musik; ?>"  class="link-product-add-cart">Quick View</a>
+													<a href="<?php echo base_url(); ?>index.php/detail/dapat/<?php echo $almus->id_alat_musik; ?>"  class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 										</div>
