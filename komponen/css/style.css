@@ -28,10 +28,12 @@ a {
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
+    
 }
 
 a:hover {
     text-decoration: none;
+    color: #fff;
     opacity: .8;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
