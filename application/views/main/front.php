@@ -572,7 +572,6 @@
 								<?php endforeach; ?>
 							</div>
 						</div>
-						<?php $this->load->view('main/modal_detail'); ?>
 						<!-- //first section -->
 						<!-- second section -->
 						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
