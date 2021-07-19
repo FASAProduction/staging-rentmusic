@@ -27,8 +27,8 @@ class M_front extends CI_Model{
 		return $hasl;
 	}
 
-    function check($kode_penyewaan,$id_alat_musik,$tgl_pemesanan,$id_pelanggan,$id_paket,$id_pegawai,$jumlah,$jumlah_hari,$jumlah_hari_telat,$denda,$total_bayar,$status_bayar,$status_sewa){
-		$hascheck = $this->db->query("INSERT INTO penyewaan (kode_penyewaan,id_alat_musik,tgl_pemesanan,id_pelanggan,id_paket,id_pegawai,jumlah,jumlah_hari,jumlah_hari_telat,denda,total_bayar,status_bayar,status_sewa) VALUES ('$kode_penyewaan','$id_alat_musik','$tgl_pemesanan','$id_pelanggan','$id_paket','$id_pegawai','$jumlah','$jumlah_hari','$jumlah_hari_telat','$denda','$total_bayar','$status_bayar','$status_sewa')");
+    function check($kode_penyewaan,$id_alat_musik,$tgl_pemesanan,$tgl_jatuh_tempo,$id_pelanggan,$id_paket,$id_pegawai,$jumlah,$jumlah_hari,$jumlah_hari_telat,$denda,$total_bayar,$status_bayar,$status_sewa){
+		$hascheck = $this->db->query("INSERT INTO penyewaan (kode_penyewaan,id_alat_musik,tgl_pemesanan,tgl_jatuh_tempo,id_pelanggan,id_paket,id_pegawai,jumlah,jumlah_hari,jumlah_hari_telat,denda,total_bayar,status_bayar,status_sewa) VALUES ('$kode_penyewaan','$id_alat_musik','$tgl_pemesanan','$tgl_jatuh_tempo','$id_pelanggan','$id_paket','$id_pegawai','$jumlah','$jumlah_hari','$jumlah_hari_telat','$denda','$total_bayar','$status_bayar','$status_sewa')");
 		return $hascheck;
 	}
 	
@@ -104,5 +104,6 @@ class M_front extends CI_Model{
         $ab = $this->db->query("SELECT * FROM alat_musik WHERE id_alat_musik='$id_alat_musik'");
         return $ab;
     }
+
 }
 ?>

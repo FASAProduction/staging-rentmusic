@@ -24,6 +24,7 @@ class Front extends CI_Controller {
 		$data['pak'] = $this->m_front->data_almus_paket()->result();
 		$data['pakht'] = $this->m_front->data_almus_paket()->num_rows();
 		$data['dt_sewa'] = $this->m_front->data_sewaa()->result();
+		$data['pega'] = $this->m_front->gawai()->result();
 		$this->load->view('main/front', $data);
 	}
 
@@ -31,6 +32,7 @@ class Front extends CI_Controller {
 		$kode_penyewaan = $this->input->post('kode_penyewaan');
 		$id_alat_musik = $this->input->post('id_alat_musik');
 		$tgl_pemesanan = $this->input->post('tgl_pemesanan');
+		$tgl_jatuh_tempo = $this->input->post('tgl_jatuh_tempo');
 		$id_pelanggan = $this->input->post('id_pelanggan');
 		$id_paket = $this->input->post('id_paket');
         $id_pegawai = $this->input->post('id_pegawai');
@@ -41,7 +43,7 @@ class Front extends CI_Controller {
 		$total_bayar = $this->input->post('total_bayar');
 		$status_bayar = $this->input->post('status_bayar');
 		$status_sewa = $this->input->post('status_sewa');
-		$this->m_front->check($kode_penyewaan,$id_alat_musik,$tgl_pemesanan,$id_pelanggan,$id_paket,$id_pegawai,$jumlah,$jumlah_hari,$jumlah_hari_telat,$denda,$total_bayar,$status_bayar,$status_sewa);
+		$this->m_front->check($kode_penyewaan,$id_alat_musik,$tgl_pemesanan,$tgl_jatuh_tempo,$id_pelanggan,$id_paket,$id_pegawai,$jumlah,$jumlah_hari,$jumlah_hari_telat,$denda,$total_bayar,$status_bayar,$status_sewa);
         redirect('checkout');
 	}
 

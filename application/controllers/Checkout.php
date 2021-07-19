@@ -15,8 +15,9 @@ class Checkout extends CI_Controller {
 	{	
 		$data['judul'] = "Checkout | GM Musika Mini";
 		$data['hacheck'] = $this->m_front->data_checkout()->result();
+		$data['hachecke'] = $this->m_front->data_checkout()->num_rows();
 		$data['peg'] = $this->m_front->gawai()->result();
-		$this->load->view('main/checkout', $data);
+		$this->load->view('main/cekot', $data);
 	}
 
 	public function update_hari(){
