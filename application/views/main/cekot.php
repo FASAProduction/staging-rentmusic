@@ -81,7 +81,7 @@
 								<div class="first-row">
 									<div class="controls form-group">
 										<select class="option-w3ls" id="milih" onChange="detail()">
-											<option>== Pilih Salah Satu ==</option>
+											<option value="">== Pilih Salah Satu ==</option>
 											<option value="this">Gunakan Akun ini</option>
 											<option value="other">Alamat dan Penyewa lainnya</option>
 										</select>
@@ -90,17 +90,17 @@
 							</div>
 						</div>
 					</form>
-					<form action="#" method="post" class="creditly-card-form agileinfo_form" id="this_acc" style="display:none;">
+					<form action="<?php echo base_url('index.php/checkout/selesai'); ?>" method="post" class="creditly-card-form agileinfo_form" id="this_acc" style="display:none;">
 						<div class="creditly-wrapper wthree, w3_agileits_wrapper">
 							<div class="information-wrapper">
 								<div class="first-row">
 									<div class="controls form-group">
-										<input class="billing-address-name form-control" type="text" name="name" value="<?php echo $this->session->userdata('ses_nama'); ?>" required="" readonly >
+										<input class="billing-address-name form-control" type="text" name="" value="<?php echo $this->session->userdata('ses_nama'); ?>" required="" readonly >
 									</div>
 									<div class="w3_agileits_card_number_grids">
 										<div class="w3_agileits_card_number_grid_left form-group">
 											<div class="controls">
-												<input type="text" class="form-control" name="number" value="<?php echo $this->session->userdata('ses_hp'); ?>" required="" readonly>
+												<input type="text" class="form-control" name="" value="<?php echo $this->session->userdata('ses_hp'); ?>" required="" readonly>
 											</div>
 										</div>
 										<div class="w3_agileits_card_number_grid_right form-group">
@@ -109,8 +109,26 @@
 											</div>
 										</div>
 									</div>
+									<?php
+									foreach($hacheck as $hca):
+									?>
+									<input type="hidden" name="id_pemesanan" value="<?php echo $hca->id_pemesanan; ?>" />
+                                    <input type="hidden" name="kode_penyewaan" value="<?php echo $hca->kode_penyewaan; ?>" />
+                                    <input type="hidden" name="id_alat_musik" value="<?php echo $hca->id_alat_musik;  ?>" />
+                                    <input type="hidden" name="tgl_pemesanan" value="<?php echo $hca->tgl_pemesanan;  ?>" />
+                                    <input type="hidden" name="id_pelanggan" value="<?php echo $hca->id_pelanggan;  ?>" />
+                                    <input type="hidden" name="id_paket" value="<?php echo $hca->id_paket; ?>" />
+                                    <input type="hidden" name="id_pegawai" value="<?php echo $hca->id_pegawai; ?>" />
+                                    <input type="hidden" name="jumlah" value="<?php echo $hca->jumlah; ?>" />
+                                    <input type="hidden" name="jumlah_hari" value="<?php echo $hca->jumlah_hari; ?>" />
+                                    <input type="hidden" name="jumlah_hari_telat" value="<?php echo $hca->jumlah_hari_telat; ?>" />
+                                    <input type="hidden" name="denda" value="<?php echo $hca->denda; ?>" />
+                                    <input type="hidden" name="total_bayar" value="<?php echo $hca->total_bayar; ?>" />
+                                    <input type="hidden" name="status_bayar" value="<?php echo $hca->status_bayar; ?>" />
+                                    <input type="hidden" name="status_sewa" value="Akan Sewa" />
+									<?php endforeach; ?>
 								</div>
-								<button class="submit check_out btn">Delivery to this Address</button>
+								<button class="submit check_out btn">Sewa Sekarang</button>
 							</div>
 						</div>
 					</form>
@@ -134,7 +152,7 @@
 										</div>
 									</div>
 								</div>
-								<button class="submit check_out btn">Delivery to this Address</button>
+								<button class="submit check_out btn">Sewa Sekarang</button>
 							</div>
 						</div>
 					</form>
@@ -177,14 +195,10 @@
 										</select>
 									</div>
 								</div>
+								<button class="submit check_out btn" disabled >Sewa Sekarang</button>
 							</div>
 						</div>
 					</form>
-					<div class="checkout-right-basket">
-						<a href="payment.html">Make a Payment
-							<span class="far fa-hand-point-right"></span>
-						</a>
-					</div>
 				</div>
 			</div>
 			<?php } ?>

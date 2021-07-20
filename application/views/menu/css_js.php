@@ -53,6 +53,7 @@
 
         .logo{
             margin-left: -124px;
+			padding-top: 0px;
         }
 	</style>
 

@@ -135,7 +135,7 @@
                                                 if($this->session->userdata('masuk')!=TRUE){
                                                 ?>
 												<br/>
-                                                <a href="<?php echo base_url('index.php/login'); ?>" class="button buton">Sewa</a>
+                                                <a href="#" data-toggle="modal" data-target="#exampleModal" class="button buton">Sewa</a>
                                                 <?php }else{ 
 												foreach($pega as $peg):	
 												?>
@@ -204,7 +204,7 @@
                                                 if($this->session->userdata('masuk')!=TRUE){
                                                 ?>
 												<br/>
-                                                <a href="<?php echo base_url('index.php/login'); ?>" class="button buton">Sewa</a>
+                                                <a href="#" data-toggle="modal" data-target="#exampleModal" class="button buton">Sewa</a>
                                                 <?php }else{ ?>
 												<form action="<?php echo base_url('index.php/front/checkout'); ?>" method="post">
 													<fieldset>
