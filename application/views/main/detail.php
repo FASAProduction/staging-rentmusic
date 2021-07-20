@@ -95,7 +95,8 @@ foreach ($deta as $dd):
 		<div class="container py-xl-4 py-lg-2">
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<span>Detail</span> Barang</h3>
+			<img src="<?php echo base_url(); ?>komponen/img/details.png" width="210" height="50"  />
+			</h3>
 			<!-- //tittle heading -->
 			<div class="row">
 				<div class="col-lg-5 col-md-8 single-right-left ">
