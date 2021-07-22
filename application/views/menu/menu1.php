@@ -25,7 +25,11 @@
 								<i class="fas fa-sign-out-alt mr-2"></i> Keluar </a>
 						</li>
                         <?php }else{ ?>
-                            <li class="text-center border-right text-white">
+						<li class="text-center border-right text-white">
+							<a  class="text-white">
+								<i class="fas fa-user-alt mr-2"></i> Halo, pengunjung! </a>
+						</li>
+                        <li class="text-center border-right text-white">
 							<a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
 								<i class="fas fa-sign-in-alt mr-2"></i> Masuk </a>
 						</li>
@@ -64,8 +68,8 @@
 						<!-- search -->
 						<div class="col-10 agileits_search">
 							<form class="form-inline" action="#" method="post">
-								<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
-								<button class="btn my-2 my-sm-0" type="submit">Search</button>
+								<input class="form-control mr-sm-2" type="search" placeholder="Apa yang Anda cari?" aria-label="Search" required>
+								<button class="btn my-2 my-sm-0" type="submit">Cari</button>
 							</form>
 						</div>
 						<!-- //search -->

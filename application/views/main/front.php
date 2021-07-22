@@ -205,22 +205,31 @@
                                                 ?>
 												<br/>
                                                 <a href="#" data-toggle="modal" data-target="#exampleModal" class="button buton">Sewa</a>
-                                                <?php }else{ ?>
-												<form action="<?php echo base_url('index.php/front/checkout'); ?>" method="post">
+                                                <?php }else{ 
+												foreach($pega as $pegaw):	
+												?>
+												<form action="<?php echo base_url('index.php/front/checkout_paket'); ?>" method="post">
 													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Samsung Galaxy J7" />
-														<input type="hidden" name="amount" value="200.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="USD" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
+														<input type="hidden" name="kode_penyewaan" value="GM<?php echo random_string('numeric',3); ?>" />
+														<input type="hidden" name="id_alat_musik" value="0" />
+														<input type="hidden" name="tgl_pemesanan" value="<?php echo date('Y-m-d'); ?>" />
+														<input type="hidden" name="tgl_jatuh_tempo" value="0000-00-00" />
+														<input type="hidden" name="id_pelanggan" value="<?php echo $this->session->userdata('ses_id'); ?>" />
+														<input type="hidden" name="id_paket" value="<?php echo $paket->id_paket; ?>" />
+														<input type="hidden" name="id_pegawai" value="<?php echo $peg->id_pegawai; ?>" />
+														<input type="hidden" name="jumlah" value="1" />
+														<input type="hidden" name="jumlah_hari" value="1" />
+														<input type="hidden" name="jumlah_hari_telat" value="0" />
+														<input type="hidden" name="denda" value="0" />
+														<input type="hidden" name="total_bayar" value="<?php echo $paket->harga; ?>" />
+														<input type="hidden" name="status_bayar" value="Belum Bayar" />
+														<input type="hidden" name="status_sewa" value="Akan Sewa" />
 														<input type="submit" name="submit" value="Sewa" class="button btn" />
 													</fieldset>
 												</form>
-                                                <?php } ?>
+                                                <?php 
+												endforeach;
+												} ?>
 											</div>
 										</div>
 									</div>
