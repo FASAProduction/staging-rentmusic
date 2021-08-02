@@ -32,8 +32,7 @@
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
 				<span>T</span>erima
 				<span>K</span>asih!</h3>
-			<p class="font-weight-light pl-sm-4 mb-2">Pesanan Anda sedang di proses, dan akan dikonfirmasi oleh admin, jika pembayaran Anda melalui transfer.
-                        Silahkan datang ke GM Musika Mini untuk mengambil barang dan lakukan pembayaran jika Anda memilih metode pembayaran COD.
+			<p class="font-weight-light pl-sm-4 mb-2">Pesanan Anda sedang di proses. Silahkan datang ke GM Musika Mini untuk mengambil barang dan lakukan pembayaran jika Anda memilih metode pembayaran COD.
 			</p>
 			<br/>
 			<br/>
