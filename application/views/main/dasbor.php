@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="id">
 
 <?php $this->load->view('menu/css_js'); ?>
 
@@ -22,7 +21,10 @@
 					<div class="wrapper">
 						<!-- first section -->
 						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
-							<a href="">Dashboard</a>
+							<button class="btn btn-info">Dashboard</button>
+							<br/>
+							<br/>
+							<button class="btn btn-info">Pesanan Saya</button>
 						</div>
 						<!-- //first section -->
 						<!-- //fourth section -->
