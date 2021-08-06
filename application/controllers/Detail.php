@@ -18,6 +18,6 @@ class Detail extends CI_Controller {
 
 	public function dapat($id_alat_musik){
 		$data['deta'] = $this->m_front->getting($id_alat_musik)->result();
-		$this->load->view('main/detail', $data);
+		$this->load->view('main/deta', $data);
 	}
 }

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <?php $this->load->view('menu/head_css'); ?>
   <body>
     <div id="all">
@@ -28,80 +27,56 @@
         <div class="container">
           <div class="row bar">
             <div class="col-md-9">
-              <p class="text-muted lead">Our Products</p>
+              <h1 class="h2">Our Products</h1>
+              <hr/>
+              <p class="h2">Satuan</p>
               <div class="row products products-big">
+                <?php
+                foreach($alatlimit as $almit) :
+                ?>
                 <div class="col-lg-4 col-md-6">
                   <div class="product">
-                    <div class="image"><a href="shop-detail.html"><img src="img/product1.jpg" alt="" class="img-fluid image1"></a></div>
+                    <div class="image">
+                    <?php if($almit->pic==null){ ?>
+                      <a href="<?php echo base_url(); ?>index.php/detail/dapat/<?php echo $almit->id_alat_musik; ?>"><img src="<?php echo base_url(); ?>komponen/img/nopic.png" alt="" class="img-fluid image1"></a>
+                      <?php }else{ ?>
+                        <a href="<?php echo base_url(); ?>index.php/detail/dapat/<?php echo $almit->id_alat_musik; ?>"><img src="<?php echo base_url(); ?>komponen/img/product1.jpg" alt="" class="img-fluid image1"></a>
+                        <?php } ?>
+                    </div>
                     <div class="text">
-                      <h3 class="h5"><a href="shop-detail.html">Fur coat with very but very very long name</a></h3>
-                      <p class="price">$143.00</p>
+                      <h3 class="h5"><a href="<?php echo base_url(); ?>index.php/detail/dapat/<?php echo $almit->id_alat_musik; ?>"><?php echo $almit->nama_alat_musik; ?></a></h3>
+                      <p class="price"><?php echo rupiah($almit->harga); ?></p>
                     </div>
                   </div>
                 </div>
+                <?php endforeach; ?>
+              </div>
+              <br/>
+              <br/>
+              <p class="h2">Paket</p>
+              <div class="row products products-big">
+                <?php
+                foreach($pak as $p) :
+                ?>
                 <div class="col-lg-4 col-md-6">
                   <div class="product">
-                    <div class="image"><a href="shop-detail.html"><img src="img/product2.jpg" alt="" class="img-fluid image1"></a></div>
-                    <div class="text">
-                      <h3 class="h5"><a href="shop-detail.html">White Blouse Armani</a></h3>
-                      <p class="price">
-                        <del>$280</del> $143.00
-                      </p>
+                    <div class="image">
+                    <?php if($p->pict==null){ ?>
+                      <a href="shop-detail.html"><img src="<?php echo base_url(); ?>komponen/img/nopic.png" alt="" class="img-fluid image1"></a>
+                      <?php }else{ ?>
+                        <a href="shop-detail.html"><img src="<?php echo base_url(); ?>komponen/img/product1.jpg" alt="" class="img-fluid image1"></a>
+                        <?php } ?>
                     </div>
-                    <div class="ribbon-holder">
-                      <div class="ribbon sale">SALE</div>
-                      <div class="ribbon new">NEW</div>
+                    <div class="text">
+                      <h3 class="h5"><a href="shop-detail.html"><?php echo $p->nama_paket; ?></a></h3>
+                      <p class="price"><?php echo rupiah($p->harga); ?></p>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="product">
-                    <div class="image"><a href="shop-detail.html"><img src="img/product3.jpg" alt="" class="img-fluid image1"></a></div>
-                    <div class="text">
-                      <h3 class="h5"><a href="shop-detail.html">Black Blouse Versace</a></h3>
-                      <p class="price">$143.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="product">
-                    <div class="image"><a href="shop-detail.html"><img src="img/product4.jpg" alt="" class="img-fluid image1"></a></div>
-                    <div class="text">
-                      <h3 class="h5"><a href="shop-detail.html">Black Blouse Versace</a></h3>
-                      <p class="price">$143.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="product">
-                    <div class="image"><a href="shop-detail.html"><img src="img/product3.jpg" alt="" class="img-fluid image1"></a></div>
-                    <div class="text">
-                      <h3 class="h5"><a href="shop-detail.html">White Blouse Armani</a></h3>
-                      <p class="price">
-                        <del>$280</del> $143.00
-                      </p>
-                    </div>
-                    <div class="ribbon-holder">
-                      <div class="ribbon sale">SALE</div>
-                      <div class="ribbon new">NEW</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="product">
-                    <div class="image"><a href="shop-detail.html"><img src="img/product4.jpg" alt="" class="img-fluid image1"></a></div>
-                    <div class="text">
-                      <h3 class="h5"><a href="shop-detail.html">White Blouse Versace</a></h3>
-                      <p class="price">$143.00</p>
-                    </div>
-                    <div class="ribbon-holder">
-                      <div class="ribbon new">NEW</div>
-                    </div>
-                  </div>
-                </div>
+                <?php endforeach; ?>
               </div>
               <div class="row">
-                <div class="col-md-12 banner mb-small"><a href="#"><img src="img/banner2.jpg" alt="" class="img-fluid"></a></div>
+                <div class="col-md-12 banner mb-small"><a href="#"><img src="<?php echo base_url(); ?>komponen/img/banner2.jpg" alt="" class="img-fluid"></a></div>
               </div>
               <div class="pages">
                 <p class="loadMore text-center"><a href="#" class="btn btn-template-outlined"><i class="fa fa-chevron-down"></i> Load more</a></p>
