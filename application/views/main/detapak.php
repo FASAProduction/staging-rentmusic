@@ -1,11 +1,11 @@
 <?php
-foreach ($deta as $dd):
+foreach ($detpak as $dp):
 ?>
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php echo $dd->nama_alat_musik; ?> - Detail</title>
+    <title><?php echo $dp->nama_paket; ?> - Detail</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -48,14 +48,14 @@ foreach ($deta as $dd):
         <div class="container">
           <div class="row d-flex align-items-center flex-wrap">
             <div class="col-md-7">
-              <h1 class="h2"><?php echo $dd->nama_alat_musik; ?></h1>
+              <h1 class="h2"><?php echo $dp->nama_paket; ?></h1>
             </div>
             <div class="col-md-5">
               <ul class="breadcrumb d-flex justify-content-end">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="shop-category.html">Alat Musik</a></li>
                 <li class="breadcrumb-item"><a href="shop-category.html">Satuan</a></li>
-                <li class="breadcrumb-item active"><?php echo $dd->nama_alat_musik; ?></li>
+                <li class="breadcrumb-item active"><?php echo $dp->nama_paket; ?></li>
               </ul>
             </div>
           </div>
@@ -71,7 +71,7 @@ foreach ($deta as $dd):
               <div id="productMain" class="row">
                 <div class="col-sm-6">
                   <div data-slider-id="1" class="owl-carousel shop-detail-carousel">
-                    <?php if($dd->pic==null){ ?>
+                    <?php if($dp->pict==null){ ?>
                     <div> <img src="<?php echo base_url(); ?>komponen/img/nopic.png" alt="" class="img-fluid"></div>
                     <?php }else{ ?>
                     <div> <img src="<?php echo base_url(); ?>komponen/img/detailbig1.jpg" alt="" class="img-fluid"></div>
@@ -91,18 +91,7 @@ foreach ($deta as $dd):
                           <?php } ?>
                         </select>
                       </div>
-                      <br/>
-                      <div class="sizes">
-                        <h3>Pilih Jumlah Produk</h3>
-                        <select class="bs-select">
-                          <?php
-                          $stokk = $dd->stok;
-                          for($i=1;$i<=$stokk;$i++){?>
-                          <option value="<?php echo $i; ?>"><?php echo $i; ?> Buah</option>
-                          <?php } ?>
-                        </select>
-                      </div>
-                      <p class="price"><?php echo rupiah($dd->harga); ?></p>
+                      <p class="price"><?php echo rupiah($dp->harga); ?></p>
                       <p class="text-center">
                         <button type="submit" class="btn btn-template-outlined"><i class="fa fa-shopping-cart"></i> Sewa Sekarang</button>
                       </p>

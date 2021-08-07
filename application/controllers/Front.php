@@ -46,9 +46,4 @@ class Front extends CI_Controller {
 		$this->m_front->check($kode_penyewaan,$id_alat_musik,$tgl_pemesanan,$tgl_jatuh_tempo,$id_pelanggan,$id_paket,$id_pegawai,$jumlah,$jumlah_hari,$jumlah_hari_telat,$denda,$total_bayar,$status_bayar,$status_sewa);
         redirect('checkout');
 	}
-
-	public function dapat($id_alat_musik){
-		$data['deta'] = $this->m_front->getting($id_alat_musik)->result();
-		$this->load->view('main/detail', $data);
-	}
 }

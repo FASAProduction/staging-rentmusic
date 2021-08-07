@@ -105,5 +105,10 @@ class M_front extends CI_Model{
         return $ab;
     }
 
+    function getting_packet($id_paket){
+        $ab = $this->db->query("SELECT * FROM daftar_paket WHERE id_paket='$id_paket'");
+        return $ab;
+    }
+
 }
 ?>

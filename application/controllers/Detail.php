@@ -16,8 +16,13 @@ class Detail extends CI_Controller {
 	{	
 	}
 
-	public function dapat($id_alat_musik){
+	public function satuan($id_alat_musik){
 		$data['deta'] = $this->m_front->getting($id_alat_musik)->result();
 		$this->load->view('main/deta', $data);
+	}
+
+	public function paket($id_paket){
+		$data['detpak'] = $this->m_front->getting_packet($id_paket)->result();
+		$this->load->view('main/detapak', $data);
 	}
 }

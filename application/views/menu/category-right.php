@@ -21,5 +21,5 @@
                   </ul>
                 </div>
               </div>
-              <div class="banner"><a href="shop-category.html"><img src="<?php echo base_url(); ?>komponen/img/banner.jpg" alt="sales 2014" class="img-fluid"></a></div>
+              <div class="banner"><a href="shop-category.html"><img src="<?php echo base_url(); ?>komponen/img/banner12.png" alt="sales 2014" class="img-fluid"></a></div>
             </div>
