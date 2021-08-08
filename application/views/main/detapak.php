@@ -113,7 +113,7 @@ foreach ($detpak as $dp):
           </div>
         </div>
       </div>
-      
+      <?php $this->load->view('menu/modal_login'); ?>
       <?php $this->load->view('menu/footer'); ?>
     </div>
     <!-- Javascript files-->
