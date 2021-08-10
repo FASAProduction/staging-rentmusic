@@ -19,7 +19,7 @@
                 </p>
               </form>
               <p class="text-center text-muted">Belum menjadi member?</p>
-              <p class="text-center text-muted"><a href="<?php echo base_url('index.php/register'); ?>"><strong>Mendaftar sekarang</strong></a>! Disamping mendaftar gratis, Anda juga akan mendapatkan keuntungan lebih dengan bertransaksi disini.</p>
+              <p class="text-center text-muted"><a href="#" data-toggle="modal" data-target="#reg-modal" data-dismiss="modal"><strong>Mendaftar sekarang</strong></a>! Disamping mendaftar gratis, Anda juga akan mendapatkan keuntungan lebih dengan bertransaksi disini.</p>
             </div>
           </div>
         </div>

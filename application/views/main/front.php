@@ -84,6 +84,7 @@
         </div>
       </div>
       <!-- GET IT-->
+      <?php $this->load->view('menu/modal_register'); ?>
       <?php $this->load->view('menu/modal_login'); ?>
       <?php $this->load->view('menu/footer'); ?>
     </div>

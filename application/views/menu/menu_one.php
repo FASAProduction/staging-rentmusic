@@ -13,7 +13,7 @@
                 <?php if($this->session->userdata('masuk') == TRUE){ ?>
                 <div class="login"><a href="<?php echo base_url('index.php/my'); ?>" class="signup-btn"><i class="fa fa-user"></i><span class="d-none d-md-inline-block"><?php echo $this->session->userdata('ses_uname'); ?></span></a> <a href="<?php echo base_url('index.php/login/logout'); ?>" class="signup-btn"><i class="fa fa-sign-out"></i><span class="d-none d-md-inline-block">Keluar</span></a></div>
                 <?php }else{ ?>
-                  <div class="login"><a href="#" data-toggle="modal" data-target="#login-modal" class="login-btn"><i class="fa fa-sign-in"></i><span class="d-none d-md-inline-block">Masuk</span></a><a href="<?php echo base_url('index.php/register'); ?>" class="signup-btn"><i class="fa fa-user"></i><span class="d-none d-md-inline-block">Daftar</span></a></div>
+                  <div class="login"><a href="#" data-toggle="modal" data-target="#login-modal" class="login-btn"><i class="fa fa-sign-in"></i><span class="d-none d-md-inline-block">Masuk</span></a><a href="#" data-toggle="modal" data-target="#reg-modal" class="signup-btn"><i class="fa fa-user"></i><span class="d-none d-md-inline-block">Daftar</span></a></div>
                 <?php  } ?>
                 <ul class="social-custom list-inline">
                   <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
