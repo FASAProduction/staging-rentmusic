@@ -74,7 +74,7 @@ foreach ($detpak as $dp):
                     <?php if($dp->pict==null){ ?>
                     <div> <img src="<?php echo base_url(); ?>komponen/img/nopic.png" alt="" class="img-fluid"></div>
                     <?php }else{ ?>
-                    <div> <img src="<?php echo base_url(); ?>komponen/img/detailbig1.jpg" alt="" class="img-fluid"></div>
+                      <div> <img src="../../../../staging-admrentmusic/komponen/dist/img/produk/paket/<?php echo $dp->pict; ?>" alt="" class="img-fluid"></div>
                     <?php } ?>
                   </div>
                 </div>

@@ -14,6 +14,7 @@ class Thanks extends CI_Controller {
 	public function index()
 	{	
 		$data['judul'] = "Thank You | GM Musika Mini";
+		$data['prosewa'] = $this->m_front->prose()->result();
 		$this->load->view('main/thankyou', $data);
 	}
 }

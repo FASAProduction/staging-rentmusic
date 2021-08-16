@@ -74,7 +74,7 @@ foreach ($deta as $dd):
                     <?php if($dd->pic==null){ ?>
                     <div> <img src="<?php echo base_url(); ?>komponen/img/nopic.png" alt="" class="img-fluid"></div>
                     <?php }else{ ?>
-                    <div> <img src="<?php echo base_url(); ?>komponen/img/detailbig1.jpg" alt="" class="img-fluid"></div>
+                    <div> <img src="../../../../staging-admrentmusic/komponen/dist/img/produk/almus/<?php echo $dd->pic; ?>" alt="" class="img-fluid"></div>
                     <?php } ?>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ foreach ($deta as $dd):
                       <p class="text-center">
 														<input type="hidden" name="jumlah_hari_telat" value="0" />
 														<input type="hidden" name="denda" value="0" />
-														<input type="hidden" name="total_bayar" value="<?php echo $dd->harga; ?>" />
+														<input type="text" name="total_bayar" id="ww" />
 														<input type="hidden" name="status_bayar" value="Belum Bayar" />
 														<input type="hidden" name="status_sewa" value="Akan Sewa" />
                             <button type="submit" class="btn btn-template-outlined"><i class="fa fa-shopping-cart"></i> Sewa Sekarang</button>
@@ -178,7 +178,7 @@ foreach ($deta as $dd):
     <script>
       function haa(){
         var q = document.getElementById("hr").value;
-        var perday = <?php json_encode($dd->harga); ?>;
+        var perday = <?php echo json_encode($dd->harga); ?>;
         var htg = perday * q;
         var w = document.getElementById("ww").value = htg;
       }

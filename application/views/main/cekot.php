@@ -94,7 +94,7 @@
                                     <input type="hidden" name="kode_penyewaan" value="<?php echo $hca->kode_penyewaan; ?>" />
                                     <input type="hidden" name="id_alat_musik" value="<?php echo $hca->id_alat_musik;  ?>" />
                                     <input type="hidden" name="tgl_pemesanan" value="<?php echo $hca->tgl_pemesanan;  ?>" />
-                                    <input type="hidden" name="id_pelanggan" value="<?php echo $hca->id_pelanggan;  ?>" />
+                                    <input type="hidden" name="id_pelanggan" value="<?php echo $this->session->userdata('ses_id');  ?>" />
                                     <input type="hidden" name="id_paket" value="<?php echo $hca->id_paket; ?>" />
                                     <input type="hidden" name="id_pegawai" value="<?php echo $hca->id_pegawai; ?>" />
                                     <input type="hidden" name="jumlah" value="<?php echo $hca->jumlah; ?>" />
@@ -103,7 +103,7 @@
                                     <input type="hidden" name="denda" value="<?php echo $hca->denda; ?>" />
                                     <input type="hidden" name="total_bayar" value="<?php echo $hca->total_bayar; ?>" />
                                     <input type="hidden" name="status_bayar" value="<?php echo $hca->status_bayar; ?>" />
-                                    <input type="hidden" name="status_sewa" value="Akan Sewa" />
+                                    <input type="hidden" name="status_sewa" value="Proses" />
 									<?php endforeach; ?>
                     <button type="submit" class="btn btn-template-main">Checkout Sekarang<i class="fa fa-chevron-right"></i></button>
                   </form>

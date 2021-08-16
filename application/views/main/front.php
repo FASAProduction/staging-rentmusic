@@ -40,7 +40,7 @@
                     <?php if($almit->pic==null){ ?>
                       <a href="<?php echo base_url(); ?>index.php/detail/satuan/<?php echo $almit->id_alat_musik; ?>"><img src="<?php echo base_url(); ?>komponen/img/nopic.png" alt="" class="img-fluid image1"></a>
                       <?php }else{ ?>
-                        <a href="<?php echo base_url(); ?>index.php/detail/satuan/<?php echo $almit->id_alat_musik; ?>"><img src="<?php echo base_url(); ?>komponen/img/product1.jpg" alt="" class="img-fluid image1"></a>
+                        <a href="<?php echo base_url(); ?>index.php/detail/satuan/<?php echo $almit->id_alat_musik; ?>"><img src="../../../../staging-admrentmusic/komponen/dist/img/produk/almus/<?php echo $almit->pic; ?>" alt="" class="img-fluid image1"></a>
                         <?php } ?>
                     </div>
                     <div class="text">

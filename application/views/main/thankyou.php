@@ -30,6 +30,41 @@
                   <p class="lead">
                       Terima kasih sudah menyewa produk kami. Silahkan ke toko kami untuk melakukan pembayaran.
                   </p>
+
+                  <p class="lead">
+                    Berikut rincian penyewaan Anda:
+                    <hr/>
+                    <?php
+                    foreach($prosewa as $ps):
+                    ?>
+                    <div class="row">
+                        <div class="col-md-4">
+                          Nama Alat Musik
+                          <br/>
+                          Tanggal penyewaan
+                          <br/>
+                          Tanggal kembali
+                          <br/>
+                          Jumlah Hari
+                          <br/>
+                          Total Pembayaran
+                        </div>
+                        <div class="col-md-8">
+                          : <?php echo $ps->nama_alat_musik; ?>
+                          <br/>
+                          : <?php echo $ps->tgl_pemesanan; ?>
+                          <br/>
+                          : <?php echo $ps->$tgl_jatuh_tempo; ?>
+                          <br/>
+                          : <?php echo $ps->$jumlah_hari; ?> Hari
+                          <br/>
+                          : <?php echo rupiah($ps->total_bayar); ?>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+
+                    Silahkan menuju ke <a href="<?php echo base_url('index.php/my'); ?>">Penyewaan Saya</a> untuk detail penyewaan lebih lanjut.
+                  </p>
                 </div>
               </section>
             </div>

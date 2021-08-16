@@ -38,7 +38,7 @@ class Checkout extends CI_Controller {
         $id_pegawai = $this->input->post('id_pegawai');
         $jumlah = $this->input->post('jumlah');
 		$jumlah_hari = $this->input->post('jumlah_hari');
-		$tgl_jatuh_tempo = date('Y-m-d', strtotime($tgl_pemesanan.' + '.$jumlah_hari.' days'));
+		$tgl_jatuh_tempo = date('Y-m-d', strtotime($tgl_pemesanan.' + '.$jumlah_hari.' Days'));
 		$jumlah_hari_telat = $this->input->post('jumlah_hari_telat');
 		$denda = $this->input->post('denda');
 		$total_bayar = $this->input->post('total_bayar');

@@ -27,28 +27,20 @@
         <div class="container">
           <div class="row bar">
             <div class="col-md-9">
-              <h1 class="h2">Produk</h1>
+              <h1 class="h2">Our Products</h1>
               <hr/>
-                <div class="sizes">
-                        <h3>Pilih Kategori</h3>
-                        <select class="bs-select" id="jenis" onChange="berubah()">
-                        <option value="">-- Pilih Salah Satu --</option>
-                            <option value="satuan">Satuan</option>
-                            <option value="paket">Paket</option>
-                        </select>
-                </div>
-                <br/>
-                <div class="row products products-big">
+              <p class="text-muted lead">Satuan</p>
+              <div class="row products products-big">
                 <?php
                 foreach($alatm as $am) :
                 ?>
-                <div class="col-lg-4 col-md-6" id="satu" style="display: none;">
+                <div class="col-lg-4 col-md-6">
                   <div class="product">
                     <div class="image">
                     <?php if($am->pic==null){ ?>
                       <a href="<?php echo base_url(); ?>index.php/detail/satuan/<?php echo $am->id_alat_musik; ?>"><img src="<?php echo base_url(); ?>komponen/img/nopic.png" alt="" class="img-fluid image1"></a>
                       <?php }else{ ?>
-                        <a href="<?php echo base_url(); ?>index.php/detail/satuan/<?php echo $am->id_alat_musik; ?>"><img src="<?php echo base_url(); ?>komponen/img/<?php echo $am->pic; ?>" alt="" class="img-fluid image1"></a>
+                        <a href="<?php echo base_url(); ?>index.php/detail/satuan/<?php echo $am->id_alat_musik; ?>"><img src="../../../../staging-admrentmusic/komponen/dist/img/produk/almus/<?php echo $am->pic; ?>" alt="" class="img-fluid image1"></a>
                         <?php } ?>
                     </div>
                     <div class="text">
@@ -58,29 +50,31 @@
                   </div>
                 </div>
                 <?php endforeach; ?>
-
+              </div>
+              <br/>
+              <br/>
+              <p class="text-muted lead">Paket</p>
+              <div class="row products products-big">
                 <?php
-                foreach($pak as $pp) :
+                foreach($pak as $p) :
                 ?>
-                <div class="col-lg-4 col-md-6" id="pak" style="display: none;">
+                <div class="col-lg-4 col-md-6">
                   <div class="product">
                     <div class="image">
-                    <?php if($pp->pict==null){ ?>
-                      <a href="<?php echo base_url(); ?>index.php/detail/paket/<?php echo $pp->id_paket; ?>"><img src="<?php echo base_url(); ?>komponen/img/nopic.png" alt="" class="img-fluid image1"></a>
+                    <?php if($p->pict==null){ ?>
+                      <a href="<?php echo base_url(); ?>index.php/detail/paket/<?php echo $p->id_paket; ?>"><img src="<?php echo base_url(); ?>komponen/img/nopic.png" alt="" class="img-fluid image1"></a>
                       <?php }else{ ?>
-                        <a href="<?php echo base_url(); ?>index.php/detail/paket/<?php echo $pp->id_paket; ?>"><img src="<?php echo base_url(); ?>komponen/img/products/<?php echo $pp->pict; ?>" alt="" class="img-fluid image1"></a>
+                        <a href="<?php echo base_url(); ?>index.php/detail/paket/<?php echo $p->id_paket; ?>"><img src="<?php echo base_url(); ?>komponen/img/product1.jpg" alt="" class="img-fluid image1"></a>
                         <?php } ?>
                     </div>
                     <div class="text">
-                      <h3 class="h5"><a href="<?php echo base_url(); ?>index.php/detail/paket/<?php echo $pp->id_paket; ?>"><?php echo $pp->nama_paket; ?></a></h3>
-                      <p class="price"><?php echo rupiah($pp->harga); ?></p>
+                      <h3 class="h5"><a href="<?php echo base_url(); ?>index.php/detail/paket/<?php echo $p->id_paket; ?>"><?php echo $p->nama_paket; ?></a></h3>
+                      <p class="price"><?php echo rupiah($p->harga); ?></p>
                     </div>
                   </div>
                 </div>
                 <?php endforeach; ?>
               </div>
-              <br/>
-              <br/>
               <div class="row">
                 <div class="col-md-12 banner mb-small"><a href="#"><img src="<?php echo base_url(); ?>komponen/img/banner-gm.png" alt="" class="img-fluid"></a></div>
               </div>

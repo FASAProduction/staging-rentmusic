@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_front extends CI_Model{
     function data_almus(){
-        $query=$this->db->query("SELECT * FROM alat_musik");
+        $query=$this->db->query("SELECT * FROM alat_musik ORDER BY id_alat_musik DESC");
         return $query;
     }
 
@@ -12,13 +12,19 @@ class M_front extends CI_Model{
         return $query;
     }
 
+    function prose(){
+        $wa = $this->db->query("SELECT * FROM penyewaan
+        JOIN alat_musik ON alat_musik.id_alat_musik=penyewaan.id_alat_musik
+        WHERE status_sewa='Proses'");
+    }
+
     function data_almus_limit(){
-        $query=$this->db->query("SELECT * FROM alat_musik LIMIT 3");
+        $query=$this->db->query("SELECT * FROM alat_musik ORDER BY id_alat_musik DESC LIMIT 3");
         return $query;
     }
 
     function data_almus_limited(){
-        $query=$this->db->query("SELECT * FROM alat_musik LIMIT 6");
+        $query=$this->db->query("SELECT * FROM alat_musik ORDER BY id_alat_musik DESC LIMIT 6");
         return $query;
     }
 
