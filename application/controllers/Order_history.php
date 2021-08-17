@@ -8,6 +8,7 @@ class Order_history extends CI_Controller {
         parent::__construct();
 		$this->load->helper('url');
 		$this->load->helper('rupiah_helper');
+		$this->load->helper('tanggal_helper');
         $this->load->model('m_front');   
     }
 	

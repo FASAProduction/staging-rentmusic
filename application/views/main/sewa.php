@@ -51,10 +51,10 @@
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
                                                 <td><?php echo $my->nama_alat_musik; ?></td>
-                                                <td><?php echo $my->tgl_pemesanan; ?></td>
+                                                <td><?php echo format_indo($my->tgl_pemesanan); ?></td>
                                                 <td><?php echo $my->jumlah; ?> Buah</td>
                                                 <td><?php echo $my->jumlah_hari; ?> Hari</td>
-                                                <td><?php echo $my->tgl_jatuh_tempo; ?></td>
+                                                <td><?php echo format_indo($my->tgl_jatuh_tempo); ?></td>
                                                 <td><?php echo $my->status_sewa; ?></td>
                                                 <td><?php echo rupiah($my->total_bayar); ?></td>
                                             </tr>

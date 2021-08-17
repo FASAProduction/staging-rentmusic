@@ -50,10 +50,10 @@
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
                                                 <td><?php echo $hp->nama_alat_musik; ?></td>
-                                                <td><?php echo $hp->tgl_pemesanan; ?></td>
+                                                <td><?php echo format_indo($hp->tgl_pemesanan); ?></td>
                                                 <td><?php echo $hp->jumlah; ?> Buah</td>
                                                 <td><?php echo $hp->jumlah_hari; ?> Hari</td>
-                                                <td><?php echo $hp->tgl_jatuh_tempo; ?></td>
+                                                <td><?php echo format_indo($hp->tgl_jatuh_tempo); ?></td>
                                                 <td><?php echo $hp->status_sewa; ?></td>
                                                 <td><?php echo rupiah($hp->total_bayar); ?></td>
                                             </tr>
