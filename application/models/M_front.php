@@ -65,7 +65,15 @@ class M_front extends CI_Model{
         $pe = $this->session->userdata('ses_id');
         $query=$this->db->query("SELECT * FROM penyewaan
         JOIN alat_musik ON alat_musik.id_alat_musik=penyewaan.id_alat_musik
-        WHERE id_pelanggan='$pe' AND status_sewa='Diproses'");
+        WHERE id_pelanggan='$pe' AND status_sewa='Proses'");
+        return $query;
+    }
+
+    function data_sewa_selesai(){
+        $pe = $this->session->userdata('ses_id');
+        $query=$this->db->query("SELECT * FROM penyewaan
+        JOIN alat_musik ON alat_musik.id_alat_musik=penyewaan.id_alat_musik
+        WHERE id_pelanggan='$pe' AND status_sewa='Selesai'");
         return $query;
     }
 	
@@ -77,11 +85,12 @@ class M_front extends CI_Model{
 		return $haschecke;
 	}
 
-    function proselesai($id_pemesanan,$kode_penyewaan,$id_alat_musik,$tgl_pemesanan,$id_pelanggan,$id_paket,$id_pegawai,$jumlah,$jumlah_hari,$total_bayar,$status_bayar){
+    function proselesai($id_pemesanan,$kode_penyewaan,$id_alat_musik,$tgl_pemesanan,$tgl_jatuh_tempo,$id_pelanggan,$id_paket,$id_pegawai,$jumlah,$jumlah_hari,$jumlah_hari_telat,$denda,$total_bayar,$status_bayar,$status_sewa){
 		$haschecked = $this->db->query("UPDATE penyewaan SET
         kode_penyewaan='$kode_penyewaan',
         id_alat_musik='$id_alat_musik',
         tgl_pemesanan='$tgl_pemesanan',
+        tgl_jatuh_tempo='$tgl_jatuh_tempo',
         id_pelanggan='$id_pelanggan',
         id_paket='$id_paket',
         id_pegawai='$id_pegawai',

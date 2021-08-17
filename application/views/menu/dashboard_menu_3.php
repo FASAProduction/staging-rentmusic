@@ -6,9 +6,9 @@
                 </div>
                 <div class="panel-body">
                   <ul class="nav nav-pills flex-column text-sm category-menu">
-                    <li class="nav-item"><a href="<?php echo base_url('index.php/my'); ?>" class="nav-link active d-flex align-items-center justify-content-between"><span>Dashboard </span></a></li>
+                    <li class="nav-item"><a href="<?php echo base_url('index.php/my'); ?>" class="nav-link d-flex align-items-center justify-content-between"><span>Dashboard </span></a></li>
                     <li class="nav-item"><a href="<?php echo base_url('index.php/myorder'); ?>" class="nav-link d-flex align-items-center justify-content-between"><span>Pesanan Saya </span></a></li>
-                    <li class="nav-item"><a href="<?php echo base_url('index.php/order_history'); ?>" class="nav-link d-flex align-items-center justify-content-between"><span>Riwayat Pesanan Saya </span></a></li>
+                    <li class="nav-item"><a href="<?php echo base_url('index.php/order_history'); ?>" class="nav-link active d-flex align-items-center justify-content-between"><span>Riwayat Pesanan Saya </span></a></li>
                   </ul>
                 </div>
               </div>

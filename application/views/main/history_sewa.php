@@ -27,8 +27,7 @@
                     <div id="checkout" class="col-lg-9">
                         <div class="box">
                             <div class="content">
-                            <div class="alert alert-info"><b>Perhatian!</b> Mohon untuk melakukan pembayaran di toko GM Musika Mini,
-                    sekaligus mengambil barang yang disewa. Terima kasih.</div> 
+                            <div class="alert alert-success">Terima kasih telah mempercayai GM Musika Mini sebagai tempat menyewa alat musik.</div> 
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
@@ -45,25 +44,25 @@
                                         </thead>
                                         <tbody>
                                             <?php
-							if($hpemesan > 0){
+							if($hhist > 0){
 							$no = 1; 
-							foreach($pemesan as $my): ?>
+							foreach($hist as $hp): ?>
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
-                                                <td><?php echo $my->nama_alat_musik; ?></td>
-                                                <td><?php echo $my->tgl_pemesanan; ?></td>
-                                                <td><?php echo $my->jumlah; ?> Buah</td>
-                                                <td><?php echo $my->jumlah_hari; ?> Hari</td>
-                                                <td><?php echo $my->tgl_jatuh_tempo; ?></td>
-                                                <td><?php echo $my->status_sewa; ?></td>
-                                                <td><?php echo rupiah($my->total_bayar); ?></td>
+                                                <td><?php echo $hp->nama_alat_musik; ?></td>
+                                                <td><?php echo $hp->tgl_pemesanan; ?></td>
+                                                <td><?php echo $hp->jumlah; ?> Buah</td>
+                                                <td><?php echo $hp->jumlah_hari; ?> Hari</td>
+                                                <td><?php echo $hp->tgl_jatuh_tempo; ?></td>
+                                                <td><?php echo $hp->status_sewa; ?></td>
+                                                <td><?php echo rupiah($hp->total_bayar); ?></td>
                                             </tr>
                                             <?php endforeach;
                             }else{ 
                         ?>
                                             <tr>
-                                                <td colspan="5">
-                                                    <center>Tidak ada Barangg.</center>
+                                                <td colspan="8">
+                                                    <center>Tidak ada Riwayat.</center>
                                                 </td>
                                             </tr>
                                             <?php } ?>
@@ -73,7 +72,7 @@
                             </div>
                         </div>
                     </div>
-                    <?php $this->load->view('menu/dashboard_menu_2'); ?>
+                    <?php $this->load->view('menu/dashboard_menu_3'); ?>
                 </div>
             </div>
         </div>

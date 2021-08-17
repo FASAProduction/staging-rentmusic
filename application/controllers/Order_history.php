@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 date_default_timezone_set('Asia/Jakarta');
 
-class Thanks extends CI_Controller {
+class Order_history extends CI_Controller {
 	
 	function __construct(){
         parent::__construct();
@@ -13,8 +13,9 @@ class Thanks extends CI_Controller {
 	
 	public function index()
 	{	
-		$data['judul'] = "Thank You | GM Musika Mini";
-		$data['prosewa'] = $this->m_front->data_sewa()->result();
-		$this->load->view('main/thankyou', $data);
+		$data['judul'] = "Pesanan Saya - GM Musika Mini";
+		$data['hist'] = $this->m_front->data_sewa_selesai()->result();
+		$data['hhist'] = $this->m_front->data_sewa_selesai()->num_rows();
+		$this->load->view('main/history_sewa', $data);
 	}
 }

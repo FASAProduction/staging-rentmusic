@@ -26,8 +26,10 @@
       <div id="content">
         <div class="container">
           <div class="row bar">
+            <?php echo $this->session->flashdata('notice'); ?>
             <div class="col-md-9">
               <h1 class="h2">Our Products</h1>
+              <p class="kanan"><a href="<?php echo base_url('index.php/products'); ?>">Lihat Semua</a></p>
               <hr/>
               <p class="text-muted lead">Satuan</p>
               <div class="row products products-big">

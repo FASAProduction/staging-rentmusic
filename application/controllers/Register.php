@@ -18,7 +18,7 @@ class Register extends CI_Controller {
 		$this->load->view('register', $data);
 	}
 
-	public function daftar(){
+	public function pro(){
 		$username = $this->input->post('username');
 		$password = md5($this->input->post('password'));
 		$nama_pelanggan = $this->input->post('nama_pelanggan');
@@ -27,8 +27,9 @@ class Register extends CI_Controller {
         $kartu_identitas = $this->input->post('kartu_identitas');
         $no_identitas = $this->input->post('no_identitas');
 		$this->m_front->daft($username,$password,$nama_pelanggan,$alamat,$no_hp,$kartu_identitas,$no_identitas);
-		$this->session->set_flashdata('notice');
-        redirect('login');
+		$this->session->set_flashdata('notice', '<div class="alert alert-success"><strong>Mendaftar sukses!</strong> Silahkan login dengan detail login yang Anda berikan.</div>');
+		$url = base_url();
+        redirect($url);
 
 	}
 	

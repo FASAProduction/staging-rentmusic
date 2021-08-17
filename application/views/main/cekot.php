@@ -90,7 +90,7 @@
                     <?php
 									foreach($hacheck as $hca):
 									?>
-									<input type="hidden" name="id_pemesanan" value="<?php echo $hca->id_pemesanan; ?>" />
+									                  <input type="hidden" name="id_pemesanan" value="<?php echo $hca->id_pemesanan; ?>" />
                                     <input type="hidden" name="kode_penyewaan" value="<?php echo $hca->kode_penyewaan; ?>" />
                                     <input type="hidden" name="id_alat_musik" value="<?php echo $hca->id_alat_musik;  ?>" />
                                     <input type="hidden" name="tgl_pemesanan" value="<?php echo $hca->tgl_pemesanan;  ?>" />

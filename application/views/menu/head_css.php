@@ -30,6 +30,12 @@
     <link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-120x120.png">
     <link rel="apple-touch-icon" sizes="144x144" href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-152x152.png">
+
+    <style>
+        .kanan{
+            margin-left: 718px;
+        }
+    </style>
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
