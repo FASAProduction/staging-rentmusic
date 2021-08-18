@@ -20,6 +20,7 @@ class MyAccount extends CI_Controller {
 	}
 
     public function acc_edit(){
+		$id_pelanggan = $this->input->post('id_pelanggan');
         $username = $this->input->post('username');
 		$password = md5($this->input->post('password'));
 		$nama_pelanggan = $this->input->post('nama_pelanggan');
@@ -27,7 +28,7 @@ class MyAccount extends CI_Controller {
 		$no_hp = $this->input->post('no_hp');
         $kartu_identitas = $this->input->post('kartu_identitas');
         $no_identitas = $this->input->post('no_identitas');
-        $this->m_front->edit_acc($username,$password,$nama_pelanggan,$alamat,$no_hp,$kartu_identitas,$no_identitas);
+        $this->m_front->edit_acc($id_pelanggan,$username,$password,$nama_pelanggan,$alamat,$no_hp,$kartu_identitas,$no_identitas);
         $this->session->set_flashdata('edit', '<div class="alert alert-success"><b>Sukses!</b> Perubahan akun disimpan.</div>');
         redirect('myaccount');
     }

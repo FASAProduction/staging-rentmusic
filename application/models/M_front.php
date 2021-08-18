@@ -65,7 +65,7 @@ class M_front extends CI_Model{
         $pe = $this->session->userdata('ses_id');
         $query=$this->db->query("SELECT * FROM penyewaan
         JOIN alat_musik ON alat_musik.id_alat_musik=penyewaan.id_alat_musik
-        WHERE id_pelanggan='$pe' AND status_sewa='Proses'");
+        WHERE id_pelanggan='$pe' AND status_sewa NOT IN ('Akan Sewa')");
         return $query;
     }
 
@@ -102,6 +102,19 @@ class M_front extends CI_Model{
         status_bayar='$status_bayar',
         status_sewa='$status_sewa'
         WHERE id_pemesanan='$id_pemesanan'");
+		return $haschecked;
+	}
+
+    function edit_acc($id_pelanggan,$username,$password,$nama_pelanggan,$alamat,$no_hp,$kartu_identitas,$no_identitas){
+		$haschecked = $this->db->query("UPDATE pelanggan SET
+        username='$username',
+        password='$password',
+        nama_pelanggan='$nama_pelanggan',
+        alamat='$alamat',
+        no_hp='$no_hp',
+        kartu_identitas='$kartu_identitas',
+        no_identitas='$no_identitas'
+        WHERE id_pelanggan='$id_pelanggan'");
 		return $haschecked;
 	}
 

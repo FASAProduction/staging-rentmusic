@@ -41,12 +41,37 @@
         margin-left: 718px;
     }
 
+    .zoom-effect {
+        position: relative;
+        width: 100%;
+        height: 360px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
     .bulat {
-        border: 2px solid #000000;
+        border: 4px solid #4fbfa8;
         width: 200px;
         height: 200px;
         overflow: hidden;
         border-radius: 50%;
+        -webkit-transition: 0.4s ease;
+        transition: 0.4s ease;
+    }
+
+    .zoom-effect:hover .bulat {
+        -webkit-transform: scale(1.08);
+        transform: scale(1.08);
+    }
+
+    .atas {
+        margin-top: -65px;
+        margin-left: 82px;
+    }
+
+    .kanana {
+        margin-top: -45px;
+        margin-left: 118px;
     }
     </style>
     <!-- Tweaks for older IEs-->

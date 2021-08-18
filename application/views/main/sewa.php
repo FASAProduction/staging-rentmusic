@@ -27,8 +27,9 @@
                     <div id="checkout" class="col-lg-9">
                         <div class="box">
                             <div class="content">
-                            <div class="alert alert-info"><b>Perhatian!</b> Mohon untuk melakukan pembayaran di toko GM Musika Mini,
-                    sekaligus mengambil barang yang disewa. Terima kasih.</div> 
+                                <div class="alert alert-info"><b>Perhatian!</b> Mohon untuk melakukan pembayaran di toko
+                                    GM Musika Mini,
+                                    sekaligus mengambil barang yang disewa. Terima kasih.</div>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
@@ -45,9 +46,9 @@
                                         </thead>
                                         <tbody>
                                             <?php
-							if($hpemesan > 0){
-							$no = 1; 
-							foreach($pemesan as $my): ?>
+                                            if($hpemesan > 0){
+                                            $no = 1; 
+                                            foreach($pemesan as $my): ?>
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
                                                 <td><?php echo $my->nama_alat_musik; ?></td>
@@ -55,7 +56,9 @@
                                                 <td><?php echo $my->jumlah; ?> Buah</td>
                                                 <td><?php echo $my->jumlah_hari; ?> Hari</td>
                                                 <td><?php echo format_indo($my->tgl_jatuh_tempo); ?></td>
-                                                <td><?php echo $my->status_sewa; ?></td>
+                                                <td><a href="" data-toggle="modal"
+                                                        data-target="#status<?php echo $my->id_pemesanan; ?>"><?php echo $my->status_sewa; ?></a>
+                                                </td>
                                                 <td><?php echo rupiah($my->total_bayar); ?></td>
                                             </tr>
                                             <?php endforeach;
@@ -78,6 +81,7 @@
             </div>
         </div>
         <?php $this->load->view('menu/modal_login'); ?>
+        <?php $this->load->view('menu/status_info'); ?>
         <?php $this->load->view('menu/footer_my'); ?>
     </div>
     <?php $this->load->view('menu/bottom_js'); ?>
