@@ -12,7 +12,8 @@
     <!-- Google fonts - Roboto-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
     <!-- Bootstrap Select-->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/komponen/vendor/bootstrap-select/css/bootstrap-select.min.css">
+    <link rel="stylesheet"
+        href="<?php echo base_url(); ?>/komponen/vendor/bootstrap-select/css/bootstrap-select.min.css">
     <!-- owl carousel-->
     <link rel="stylesheet" href="<?php echo base_url(); ?>/komponen/vendor/owl.carousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/komponen/vendor/owl.carousel/assets/owl.theme.default.css">
@@ -26,17 +27,30 @@
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="<?php echo base_url(); ?>/komponen/img/apple-touch-icon-152x152.png">
 
     <style>
-        .kanan{
-            margin-left: 718px;
-        }
+    .kanan {
+        margin-left: 718px;
+    }
+
+    .bulat {
+        border: 2px solid #000000;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
     </style>
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-  </head>
+</head>

@@ -13,10 +13,10 @@
                         class="nav-link d-flex align-items-center justify-content-between"><span>Pesanan Saya
                         </span></a></li>
                 <li class="nav-item"><a href="<?php echo base_url('index.php/order_history'); ?>"
-                        class="nav-link active d-flex align-items-center justify-content-between"><span>Riwayat Pesanan
-                            Saya </span></a></li>
+                        class="nav-link d-flex align-items-center justify-content-between"><span>Riwayat Pesanan Saya
+                        </span></a></li>
                 <li class="nav-item"><a href="<?php echo base_url('index.php/myaccount'); ?>"
-                        class="nav-link d-flex align-items-center justify-content-between"><span>Akun Saya
+                        class="nav-link active d-flex align-items-center justify-content-between"><span>Akun Saya
                         </span></a></li>
             </ul>
         </div>
