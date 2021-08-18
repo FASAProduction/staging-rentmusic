@@ -36,8 +36,8 @@ class Login extends CI_Controller {
                             redirect($url);
                     }else{  // jika username dan password tidak ditemukan atau salah
                             $url=base_url();
-                            echo $this->session->set_flashdata('msg','Username Atau Password Salah');
-                            redirect('login');
+                            echo $this->session->set_flashdata('msg','<div class="alert alert-danger">Username Atau Password Salah!</div>');
+                            redirect($url);
                     }
     }
  

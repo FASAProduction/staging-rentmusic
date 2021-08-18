@@ -7,6 +7,12 @@ class M_front extends CI_Model{
         return $query;
     }
 
+    function customer(){
+        $cu = $this->session->userdata('ses_id');
+        $cust = $this->db->query("SELECT * FROM pelanggan WHERE id_pelanggan='$cu'");
+        return $cust;
+    }
+
     function data_login($username,$password){
         $query=$this->db->query("SELECT * FROM pelanggan WHERE username='$username' AND password='$password' LIMIT 1");
         return $query;
@@ -105,10 +111,10 @@ class M_front extends CI_Model{
 		return $haschecked;
 	}
 
-    function edit_acc($id_pelanggan,$username,$password,$nama_pelanggan,$alamat,$no_hp,$kartu_identitas,$no_identitas){
+    function edit_acc($id_pelanggan,$username,$pas,$nama_pelanggan,$alamat,$no_hp,$kartu_identitas,$no_identitas){
 		$haschecked = $this->db->query("UPDATE pelanggan SET
         username='$username',
-        password='$password',
+        password='$pas',
         nama_pelanggan='$nama_pelanggan',
         alamat='$alamat',
         no_hp='$no_hp',
