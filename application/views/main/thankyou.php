@@ -41,6 +41,8 @@
                     ?>
                                 <div class="row">
                                     <div class="col-md-4">
+                                        Kode Penyewaan
+                                        <br/>
                                         Nama Alat Musik
                                         <br />
                                         Tanggal penyewaan
@@ -53,6 +55,8 @@
                                     </div>
                                     <div class="col-md-8">
                                         <strong>
+                                            : <?php echo $ps->kode_penyewaan; ?>
+                                            <br/>
                                             : <?php echo $ps->nama_alat_musik; ?>
                                             <br />
                                             : <?php echo format_indo($ps->tgl_pemesanan); ?>
@@ -69,7 +73,7 @@
                                 <br />
                                 <br />
                                 Silahkan menuju ke <a href="<?php echo base_url('index.php/myorder'); ?>">Penyewaan
-                                    Saya</a> untuk detail penyewaan lebih lanjut.
+                                    Saya</a> untuk detail penyewaan lebih lanjut, dan screenshot halaman ini untuk dibawa ke toko, dan untuk proses selanjutnya.
                                 </p>
                             </div>
                         </section>

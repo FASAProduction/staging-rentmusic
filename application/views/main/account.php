@@ -47,6 +47,8 @@
                                             <?php echo $custo->alamat; ?>
                                             <br />
                                             <?php echo $custo->no_identitas; ?>
+                                            <br/>
+                                            +62<?php echo substr($custo->no_hp,1,12); ?>
                                         <p class="lead">
                                             *<i><small>Semua kolom yang berwarna abu - abu, tidak bisa
                                                     diubah.</small></i>
