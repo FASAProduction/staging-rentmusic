@@ -13,28 +13,34 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label>Username</label>
                                 <input id="email_modal" name="username" type="text" placeholder="Username"
                                     class="form-control" required>
                             </div>
                             <div class="form-group">
+                                <label>Password</label>
                                 <input id="password_modal" name="password" type="password" placeholder="password"
                                     class="form-control" required>
                             </div>
                             <div class="form-group">
+                                <label>Nama Lengkap</label>
                                 <input id="password_modal" name="nama_pelanggan" type="text" placeholder="Nama Lengkap"
                                     class="form-control" required>
                             </div>
                             <div class="form-group">
+                                <label>Alamat</label>
                                 <textarea id="password_modal" name="alamat" placeholder="Alamat" class="form-control"
                                     required></textarea>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label>Nomor HP</label>
                                 <input id="password_modal" name="no_hp" type="number" placeholder="Nomor HP"
                                     class="form-control" required>
                             </div>
                             <div class="form-group">
+                                <label>Jenis Identitas</label>
                                 <select id="password_modal" name="kartu_identitas" class="form-control" required>
                                     <option value="">-- Pilih Salah Satu --</option>
                                     <option value="KTP">KTP</option>
@@ -43,6 +49,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label>Nomor Identitas</label>
                                 <input id="password_modal" name="no_identitas" type="number"
                                     placeholder="Nomor Identitas" class="form-control" required>
                             </div>

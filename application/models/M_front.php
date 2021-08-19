@@ -13,6 +13,10 @@ class M_front extends CI_Model{
         return $cust;
     }
 
+    function getcat($category){
+        
+    }
+
     function data_login($username,$password){
         $query=$this->db->query("SELECT * FROM pelanggan WHERE username='$username' AND password='$password' LIMIT 1");
         return $query;
