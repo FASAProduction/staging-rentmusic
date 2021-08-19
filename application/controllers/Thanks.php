@@ -16,6 +16,6 @@ class Thanks extends CI_Controller {
 	{	
 		$data['judul'] = "Thank You | GM Musika Mini";
 		$data['prosewa'] = $this->m_front->data_sewa()->result();
-		$this->load->view('main/thankyou', $data);
+		$this->load->view('main/transaction/thankyou', $data);
 	}
 }

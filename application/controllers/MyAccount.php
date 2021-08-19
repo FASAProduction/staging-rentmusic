@@ -9,13 +9,14 @@ class MyAccount extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->helper('rupiah_helper');
         $this->load->model('m_front');   
+		$this->load->model('m_my');
     }
 	
 	public function index()
 	{	
 		$data['judul'] = "Dashboard - GM Musika Mini";
-		$data['customer'] = $this->m_front->customer()->result();
-		$this->load->view('main/account', $data);
+		$data['customer'] = $this->m_my->customer()->result();
+		$this->load->view('main/my/account', $data);
 	}
 
     public function acc_edit(){
@@ -33,7 +34,7 @@ class MyAccount extends CI_Controller {
 		}else{
 			$pas = md5($password);
 		}
-        $this->m_front->edit_acc($id_pelanggan,$username,$pas,$nama_pelanggan,$alamat,$no_hp,$kartu_identitas,$no_identitas);
+        $this->m_my->edit_acc($id_pelanggan,$username,$pas,$nama_pelanggan,$alamat,$no_hp,$kartu_identitas,$no_identitas);
         $this->session->set_flashdata('edit', '<div class="alert alert-success"><b>Sukses!</b> Perubahan akun disimpan.</div>');
         redirect('myaccount');
     }

@@ -17,6 +17,6 @@ class Order_history extends CI_Controller {
 		$data['judul'] = "Pesanan Saya - GM Musika Mini";
 		$data['hist'] = $this->m_front->data_sewa_selesai()->result();
 		$data['hhist'] = $this->m_front->data_sewa_selesai()->num_rows();
-		$this->load->view('main/history_sewa', $data);
+		$this->load->view('main/my/history_sewa', $data);
 	}
 }
