@@ -107,13 +107,13 @@ foreach ($deta as $dd):
                         <h3>Pilih Jumlah Hari</h3>
                         <select class="bs-select" name="jumlah_hari" id="hr" onChange="haa()">
                           <?php
-                          for($a=1;$a<=20;$a++){
+                          for($a=0;$a<=20;$a++){
                           ?>
                           <option value="<?php echo $a; ?>"><?php echo $a; ?> Hari</option>
                           <?php } ?>
                         </select>
                       </div>
-                      <p class="price"><?php echo rupiah($dd->harga); ?></p>
+                      <p class="price"><?php echo rupiah($dd->harga); ?><small>/ hari</small></p>
                       <p class="text-center">
 														<input type="hidden" name="jumlah_hari_telat" value="0" />
 														<input type="hidden" name="denda" value="0" />
@@ -129,7 +129,7 @@ foreach ($deta as $dd):
                         <h3>Pilih Jumlah Hari</h3>
                         <select class="bs-select" id="harii" onChange="day()">
                           <?php
-                          for($a=1;$a<=20;$a++){
+                          for($a=0;$a<=20;$a++){
                           ?>
                           <option value="<?php echo $a; ?>"><?php echo $a; ?> Hari</option>
                           <?php } ?>
@@ -141,12 +141,12 @@ foreach ($deta as $dd):
                         <select class="bs-select" id="prod" onChange="prod()">
                           <?php
                           $stokk = $dd->stok;
-                          for($i=1;$i<=$stokk;$i++){?>
+                          for($i=0;$i<=$stokk;$i++){?>
                           <option value="<?php echo $i; ?>"><?php echo $i; ?> Buah</option>
                           <?php } ?>
                         </select>
                       </div>
-                      <p class="price"><?php echo rupiah($dd->harga); ?></p>
+                      <p class="price"><?php echo rupiah($dd->harga); ?><small>/ hari</small></p>
                         <p class="text-center">
                         <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-template-outlined"><i class="fa fa-shopping-cart"></i> Sewa Sekarang</a>
                       </p>
