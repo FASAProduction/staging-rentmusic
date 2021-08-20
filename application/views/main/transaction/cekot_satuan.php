@@ -22,9 +22,9 @@
                       </thead>
                       <tbody>
                       <?php
-							if($hachecke > 0){
+							if($hasat > 0){
 							$no = 1; 
-							foreach($hacheck as $hc): ?>
+							foreach($sat as $hc): ?>
                         <tr>
                           <td><?php echo $no++; ?></td>
                           <td><?php echo $hc->nama_alat_musik; ?></td>
@@ -42,8 +42,8 @@
                       </tbody>
                       <tfoot>
                       <?php
-							if($hachecke > 0){
-							foreach($hacheck as $ha): ?>
+							if($hasat > 0){
+							foreach($sat as $ha): ?>
                         <tr> 
                           <th colspan="4">Total</th>
                           <th><?php echo rupiah($ha->total_bayar); ?></th>
@@ -65,7 +65,7 @@
                   <div class="right-col">
                     <form action="<?php echo base_url('index.php/checkout/selesai'); ?>" method="post">
                     <?php
-									foreach($hacheck as $hca):
+									foreach($sat as $hca):
 									?>
 									                  <input type="hidden" name="id_pemesanan" value="<?php echo $hca->id_pemesanan; ?>" />
                                     <input type="hidden" name="kode_penyewaan" value="<?php echo $hca->kode_penyewaan; ?>" />
@@ -98,8 +98,8 @@
                   <table class="table">
                     <tbody>
                     <?php
-							if($hachecke > 0){
-							foreach($hacheck as $hb): 
+							if($hasat > 0){
+							foreach($sat as $hb): 
                     ?>
                       <tr class="total">
                         <td>Total</td>

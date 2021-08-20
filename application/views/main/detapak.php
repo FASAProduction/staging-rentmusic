@@ -80,21 +80,77 @@ foreach ($detpak as $dp):
                 </div>
                 <div class="col-sm-6">
                   <div class="box">
-                    <form>
+                  <form action="<?php echo base_url('index.php/detail/checkout'); ?>" method="post">
+                      <?php
+                      if($this->session->userdata('masuk') == TRUE){
+                        foreach($pega as $peg):
+                      ?>
+                            <input type="hidden" name="kode_penyewaan" value="GM<?php echo random_string('numeric',3); ?>" />
+														<input type="hidden" name="id_alat_musik" value="0" />
+														<input type="hidden" name="tgl_pemesanan" value="<?php echo date('Y-m-d'); ?>" />
+														<input type="hidden" name="tgl_jatuh_tempo" value="0000-00-00" />
+														<input type="hidden" name="id_pelanggan" value="<?php echo $this->session->userdata('ses_id'); ?>" />
+														<input type="hidden" name="id_paket" value="<?php echo $dp->id_paket; ?>" />
+														<input type="hidden" name="id_pegawai" value="<?php echo $peg->id_pegawai; ?>" />
+                      <div class="sizes">
+                        <h3>Pilih Jumlah Produk</h3>
+                        <select class="bs-select" name="jumlah">
+                          <?php
+                          $stokk = $dp->stok;
+                          for($i=1;$i<=$stokk;$i++){?>
+                          <option value="<?php echo $i; ?>"><?php echo $i; ?> Buah</option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                      <br/>
                       <div class="sizes">
                         <h3>Pilih Jumlah Hari</h3>
-                        <select class="bs-select">
+                        <select class="bs-select" name="jumlah_hari" id="hr" onChange="haa()">
                           <?php
-                          for($a=1;$a<=20;$a++){
+                          for($a=0;$a<=20;$a++){
                           ?>
                           <option value="<?php echo $a; ?>"><?php echo $a; ?> Hari</option>
                           <?php } ?>
                         </select>
                       </div>
-                      <p class="price"><?php echo rupiah($dp->harga); ?></p>
+                      <p class="price"><?php echo rupiah($dp->harga); ?><small>/ hari</small></p>
                       <p class="text-center">
-                        <button type="submit" class="btn btn-template-outlined"><i class="fa fa-shopping-cart"></i> Sewa Sekarang</button>
+														<input type="hidden" name="jumlah_hari_telat" value="0" />
+														<input type="hidden" name="denda" value="0" />
+														<input type="text" name="total_bayar" id="ww" />
+														<input type="hidden" name="status_bayar" value="Belum Bayar" />
+														<input type="hidden" name="status_sewa" value="Akan Sewa" />
+                            <button type="submit" class="btn btn-template-outlined"><i class="fa fa-shopping-cart"></i> Sewa Sekarang</button>
                       </p>
+                      <?php
+                      endforeach; 
+                    }else{ ?>
+                        <div class="sizes">
+                        <h3>Pilih Jumlah Hari</h3>
+                        <select class="bs-select" id="harii" onChange="day()">
+                          <?php
+                          for($a=0;$a<=20;$a++){
+                          ?>
+                          <option value="<?php echo $a; ?>"><?php echo $a; ?> Hari</option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                      <br/>
+                      <div class="sizes">
+                        <h3>Pilih Jumlah Produk</h3>
+                        <select class="bs-select" id="prod" onChange="prod()">
+                          <?php
+                          $stokk = $dp->stok;
+                          for($i=0;$i<=$stokk;$i++){?>
+                          <option value="<?php echo $i; ?>"><?php echo $i; ?> Buah</option>
+                          <?php } ?>
+                        </select>
+                      </div>
+                      <p class="price"><?php echo rupiah($dp->harga); ?><small>/ hari</small></p>
+                        <p class="text-center">
+                        <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-template-outlined"><i class="fa fa-shopping-cart"></i> Sewa Sekarang</a>
+                      </p>
+                      <?php } ?>
                     </form>
                   </div>
                 </div>

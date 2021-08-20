@@ -9,7 +9,9 @@ class Products extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->helper('string');
 		$this->load->helper('rupiah_helper');
-        $this->load->model('m_front');   
+        $this->load->model('m_front');
+		$this->load->model('m_trans');
+		$this->load->model('m_my');   
     }
 	
 	public function index()

@@ -9,7 +9,9 @@ class Order_history extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->helper('rupiah_helper');
 		$this->load->helper('tanggal_helper');
-        $this->load->model('m_front');   
+        $this->load->model('m_front');
+		$this->load->model('m_trans');
+		$this->load->model('m_my');   
     }
 	
 	public function index()

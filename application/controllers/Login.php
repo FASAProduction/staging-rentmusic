@@ -7,6 +7,8 @@ class Login extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
 		$this->load->model('m_front');
+		$this->load->model('m_trans');
+		$this->load->model('m_my');
 
 	}
 	

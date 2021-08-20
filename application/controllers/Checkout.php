@@ -9,13 +9,18 @@ class Checkout extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->helper('rupiah_helper');
         $this->load->model('m_front');
-		$this->load->model('m_trans');   
+		$this->load->model('m_trans');
+		$this->load->model('m_my');  
     }
 	
 	public function index()
 	{	
 		$data['judul'] = "Checkout | GM Musika Mini";
 		$data['hacheck'] = $this->m_trans->data_checkout()->result();
+		$data['sat'] = $this->m_trans->data_sewa_satuan()->result();
+		$data['hasat'] = $this->m_trans->data_sewa_satuan()->num_rows();
+		$data['pak'] = $this->m_trans->data_sewa_paket()->result();
+		$data['hapak'] = $this->m_trans->data_sewa_paket()->num_rows();
 		$data['peg'] = $this->m_trans->gawai()->result();
 		$this->load->view('main/transaction/cekot', $data);
 	}

@@ -9,7 +9,9 @@ class Register extends CI_Controller {
         parent::__construct();
         //validasi jika user belum login
 		
-		$this->load->model('m_front'); 
+		$this->load->model('m_front');
+		$this->load->model('m_trans');
+		$this->load->model('m_my'); 
 	}
 	
 	public function index()

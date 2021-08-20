@@ -8,7 +8,8 @@ class MyAccount extends CI_Controller {
         parent::__construct();
 		$this->load->helper('url');
 		$this->load->helper('rupiah_helper');
-        $this->load->model('m_front');   
+        $this->load->model('m_front');
+		$this->load->model('m_trans');
 		$this->load->model('m_my');
     }
 	
