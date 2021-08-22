@@ -44,15 +44,15 @@
                         <div class="col-lg-3 col-md-6">
                           <h5>Satuan</h5>
                           <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="template-accordions.html" class="nav-link">Akustik</a></li>
-                            <li class="nav-item"><a href="template-alerts.html" class="nav-link">Elektrik</a></li>
+                            <li class="nav-item"><a href="<?php echo base_url('index.php/eror'); ?>" class="nav-link">Akustik</a></li>
+                            <li class="nav-item"><a href="<?php echo base_url('index.php/eror'); ?>" class="nav-link">Elektrik</a></li>
                           </ul>
                         </div>
                         <div class="col-lg-3 col-md-6">
                           <h5>Paket</h5>
                           <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="template-header-default.html" class="nav-link">Paket Alat Musik + Sound System</a></li>
-                            <li class="nav-item"><a href="template-header-nosticky.html" class="nav-link">Paket Only</a></li>
+                            <li class="nav-item"><a href="<?php echo base_url('index.php/eror'); ?>" class="nav-link">Paket Alat Musik + Sound System</a></li>
+                            <li class="nav-item"><a href="<?php echo base_url('index.php/eror'); ?>" class="nav-link">Paket Only</a></li>
                           </ul>
                         </div>
                       </div>
@@ -62,7 +62,7 @@
                 <li class="nav-item dropdown"><a href="<?php echo base_url('index.php/products'); ?>" class="">Produk </a>
                 </li>
                 <!-- ========== Contact dropdown ==================-->
-                <li class="nav-item dropdown"><a href="<?php echo base_url('index.php/contact'); ?>" class="">Kontak Kami </a>
+                <li class="nav-item dropdown"><a href="<?php echo base_url('index.php/eror'); ?>" class="">Kontak Kami </a>
                 </li>
                 <!-- ========== Contact dropdown end ==================-->
               </ul>

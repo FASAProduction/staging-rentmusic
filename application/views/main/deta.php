@@ -80,7 +80,7 @@ foreach ($deta as $dd):
                 </div>
                 <div class="col-sm-6">
                   <div class="box">
-                  <form action="<?php echo base_url('index.php/detail/checkout'); ?>" method="post">
+                  <form action="<?php echo base_url('index.php/detail/checkout_single'); ?>" method="post">
                       <?php
                       if($this->session->userdata('masuk') == TRUE){
                         foreach($pega as $peg):

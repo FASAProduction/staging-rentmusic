@@ -27,7 +27,7 @@
 							foreach($pak as $hc): ?>
                         <tr>
                           <td><?php echo $no++; ?></td>
-                          <td><?php echo $hc->nama_alat_musik; ?></td>
+                          <td><?php echo $hc->nama_paket; ?></td>
                           <td><?php echo $hc->jumlah; ?> Buah</td>
                           <td><?php echo $hc->jumlah_hari; ?> Hari</td>
                           <td><?php echo rupiah($hc->total_bayar); ?></td>
@@ -63,7 +63,7 @@
                 <div class="box-footer d-flex flex-wrap align-items-center justify-content-between">
                   <div class="left-col"><a href="shop-checkout3.html" class="btn btn-secondary mt-0"><i class="fa fa-chevron-left"></i>Kembali Belanja</a></div>
                   <div class="right-col">
-                    <form action="<?php echo base_url('index.php/checkout/selesai'); ?>" method="post">
+                    <form action="<?php echo base_url('index.php/checkout/finish'); ?>" method="post">
                     <?php
 									foreach($pak as $hca):
 									?>

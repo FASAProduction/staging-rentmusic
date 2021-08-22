@@ -22,7 +22,7 @@
         </div>
       </div>
       <?php
-      $this->load->view('main/transaction/cekot_satuan');
+      $this->load->view('main/transaction/cekot_paket');
       ?>
       <?php $this->load->view('menu/modal_login'); ?>
       <?php $this->load->view('menu/footer'); ?>

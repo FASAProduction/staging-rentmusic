@@ -17,7 +17,20 @@ class Thanks extends CI_Controller {
 	public function index()
 	{	
 		$data['judul'] = "Thank You | GM Musika Mini";
-		$data['prosewa'] = $this->m_front->data_sewa()->result();
+		$data['prosewa'] = $this->m_trans->data_sewa_satuan()->result();
+		$data['prosewapaket'] = $this->m_trans->data_sewa_paket()->result();
 		$this->load->view('main/transaction/thankyou', $data);
+	}
+
+	public function ty(){
+		$data['judul'] = "Thank You | GM Musika Mini";
+		$data['prosewa'] = $this->m_trans->data_sewa_satuan()->result();
+		$this->load->view('main/transaction/thankyou', $data);
+	}
+
+	public function typ(){
+		$data['judul'] = "Thank You | GM Musika Mini";
+		$data['prosewapaket'] = $this->m_trans->data_sewa_paket()->result();
+		$this->load->view('main/transaction/thankyou_paket', $data);
 	}
 }

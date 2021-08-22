@@ -29,7 +29,7 @@ class Detail extends CI_Controller {
 		$this->load->view('main/detapak', $data);
 	}
 
-	public function checkout(){
+	public function checkout_single(){
 		$kode_penyewaan = $this->input->post('kode_penyewaan');
 		$id_alat_musik = $this->input->post('id_alat_musik');
 		$tgl_pemesanan = $this->input->post('tgl_pemesanan');
@@ -45,6 +45,25 @@ class Detail extends CI_Controller {
 		$status_bayar = $this->input->post('status_bayar');
 		$status_sewa = $this->input->post('status_sewa');
 		$this->m_trans->check($kode_penyewaan,$id_alat_musik,$tgl_pemesanan,$tgl_jatuh_tempo,$id_pelanggan,$id_paket,$id_pegawai,$jumlah,$jumlah_hari,$jumlah_hari_telat,$denda,$total_bayar,$status_bayar,$status_sewa);
-        redirect('checkout');
+        redirect('checkout/single');
+	}
+
+	public function checkout_pack(){
+		$kode_penyewaan = $this->input->post('kode_penyewaan');
+		$id_alat_musik = $this->input->post('id_alat_musik');
+		$tgl_pemesanan = $this->input->post('tgl_pemesanan');
+		$tgl_jatuh_tempo = $this->input->post('tgl_jatuh_tempo');
+		$id_pelanggan = $this->input->post('id_pelanggan');
+		$id_paket = $this->input->post('id_paket');
+        $id_pegawai = $this->input->post('id_pegawai');
+        $jumlah = $this->input->post('jumlah');
+		$jumlah_hari = $this->input->post('jumlah_hari');
+		$jumlah_hari_telat = $this->input->post('jumlah_hari_telat');
+		$denda = $this->input->post('denda');
+		$total_bayar = $this->input->post('total_bayar');
+		$status_bayar = $this->input->post('status_bayar');
+		$status_sewa = $this->input->post('status_sewa');
+		$this->m_trans->check($kode_penyewaan,$id_alat_musik,$tgl_pemesanan,$tgl_jatuh_tempo,$id_pelanggan,$id_paket,$id_pegawai,$jumlah,$jumlah_hari,$jumlah_hari_telat,$denda,$total_bayar,$status_bayar,$status_sewa);
+        redirect('checkout/pack');
 	}
 }

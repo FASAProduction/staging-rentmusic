@@ -80,7 +80,7 @@ foreach ($detpak as $dp):
                 </div>
                 <div class="col-sm-6">
                   <div class="box">
-                  <form action="<?php echo base_url('index.php/detail/checkout'); ?>" method="post">
+                  <form action="<?php echo base_url('index.php/detail/checkout_pack'); ?>" method="post">
                       <?php
                       if($this->session->userdata('masuk') == TRUE){
                         foreach($pega as $peg):
@@ -93,7 +93,7 @@ foreach ($detpak as $dp):
 														<input type="hidden" name="id_paket" value="<?php echo $dp->id_paket; ?>" />
 														<input type="hidden" name="id_pegawai" value="<?php echo $peg->id_pegawai; ?>" />
                       <div class="sizes">
-                        <h3>Pilih Jumlah Produk</h3>
+                        <h3>Pilih Jumlah Paket</h3>
                         <select class="bs-select" name="jumlah">
                           <?php
                           $stokk = $dp->stok;
@@ -174,6 +174,14 @@ foreach ($detpak as $dp):
     </div>
     <!-- Javascript files-->
     <?php $this->load->view('menu/bottom_js'); ?>
+    <script>
+      function haa(){
+        var q = document.getElementById("hr").value;
+        var perday = <?php echo json_encode($dp->harga); ?>;
+        var htg = perday * q;
+        var w = document.getElementById("ww").value = htg;
+      }
+    </script>
   </body>
 </html>
 <?php endforeach; ?>

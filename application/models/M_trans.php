@@ -70,11 +70,27 @@ class M_trans extends CI_Model{
         return $query;
     }
 
+    function data_sewa_satuan_process(){
+        $pe = $this->session->userdata('ses_id');
+        $query=$this->db->query("SELECT * FROM penyewaan
+        JOIN alat_musik ON alat_musik.id_alat_musik=penyewaan.id_alat_musik
+        WHERE id_pelanggan='$pe' AND status_sewa='Akan Sewa'");
+        return $query;
+    }
+
     function data_sewa_paket(){
         $pe = $this->session->userdata('ses_id');
         $query=$this->db->query("SELECT * FROM penyewaan
         JOIN daftar_paket ON daftar_paket.id_paket=penyewaan.id_paket
         WHERE id_pelanggan='$pe' AND status_sewa NOT IN ('Akan Sewa')");
+        return $query;
+    }
+
+    function data_sewa_paket_process(){
+        $pe = $this->session->userdata('ses_id');
+        $query=$this->db->query("SELECT * FROM penyewaan
+        JOIN daftar_paket ON daftar_paket.id_paket=penyewaan.id_paket
+        WHERE id_pelanggan='$pe' AND status_sewa='Akan Sewa'");
         return $query;
     }
 

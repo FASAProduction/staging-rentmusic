@@ -81,7 +81,7 @@
                                         <?php }else{ ?>
                                         <a
                                             href="<?php echo base_url(); ?>index.php/detail/paket/<?php echo $p->id_paket; ?>"><img
-                                                src="<?php echo base_url(); ?>komponen/img/product1.jpg" alt=""
+                                                src="../../../../staging-admrentmusic/komponen/dist/img/produk/paket/<?php echo $p->pict; ?>" alt=""
                                                 class="img-fluid image1"></a>
                                         <?php } ?>
                                     </div>
