@@ -16,8 +16,6 @@ class My extends CI_Controller {
 	public function index()
 	{	
 		$data['judul'] = "Dashboard - GM Musika Mini";
-		$data['pemesan'] = $this->m_front->data_sewa()->result();
-		$data['hpemesan'] = $this->m_front->data_sewa()->num_rows();
 		$this->load->view('main/my/dasbor', $data);
 	}
 }
